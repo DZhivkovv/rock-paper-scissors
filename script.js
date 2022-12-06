@@ -64,3 +64,42 @@ function appendElements(playerChoice, computerChoice, winner){
     }
 }
 
+function playRound(playerChoice){
+    const computerChoice = getComputerChoice();
+    
+    if(playerChoice === computerChoice){
+        roundWinner = 'None';
+        appendElements(playerChoice, computerChoice, 'None');
+    }
+    else if(
+        (playerChoice === 'Rock' && computerChoice === 'Scissors') ||
+        (playerChoice === 'Paper' && computerChoice === 'Rock') ||
+        (playerChoice === 'Scissors' && computerChoice === 'Paper') 
+    ){
+        playerPoints += 1;
+        roundWinner = 'Player';
+
+        if(playerPoints === 5 || computerPoints === 5){
+            endGame()
+            return 'Game Over';
+        } else{
+            appendElements(playerChoice, computerChoice, roundWinner);
+        }
+    }
+    else if (
+        (playerChoice === 'Rock' && computerChoice === 'Paper') ||
+        (playerChoice === 'Paper' && computerChoice === 'Scissors') ||
+        (playerChoice === 'Scissors' && computerChoice === 'Rock') 
+    ){
+        computerPoints += 1;
+        roundWinner = 'Computer';
+
+        if(playerPoints >= 5 || computerPoints >= 5){
+            endGame()
+            return 'Game Over';
+        } else{
+            appendElements(playerChoice, computerChoice, roundWinner);
+        }
+    }
+}
+
