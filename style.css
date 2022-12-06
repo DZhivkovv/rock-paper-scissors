@@ -102,3 +102,98 @@ body{
 .disabled{
     background-color: gray !important;
 }
+
+@media screen and (min-width:360px) {
+    #start-emojis span{
+        display: none;
+    }
+
+    #start-btn{
+        padding: 15px !important;
+    }
+
+    #display{
+        font-size: 4rem !important;
+    }
+
+    #score-container{
+        font-size: 18px !important;
+    }
+
+    #buttons-container{
+        display: flex !important ;
+        flex-flow: column;
+    }
+
+
+    .choice{
+        float: left;
+        margin: 10px !important;
+        padding: 10px !important;
+    }
+    
+    #winner-paragraph-computer{
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width:550px) {
+    #start-emojis{
+        font-size: 5rem;
+    }
+
+    #start-emojis span{
+        display: none;
+    }
+
+    #start-btn{
+        padding: 30px !important;
+    }
+
+    #display{
+        font-size: 4rem !important;
+    }
+
+    #result-container{
+        font-size: 20px !important;
+    }
+
+    #score-container{
+        font-size: 25px !important;
+    }
+
+    #buttons-container{
+        display: flex !important ;
+        flex-flow: column;
+    }
+
+    .choice{
+        padding: 15px 30px !important;
+    }
+    
+    #winner-paragraph-computer{
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width:900px) {
+    #display{
+        font-size: 8rem !important;
+    }
+
+    #start-emojis{
+        font-size: 6rem;
+    }
+
+    #start-emojis span{
+        display: inline;
+    }
+
+    #buttons-container{
+        padding:  15px !important;
+    }
+
+    .winner-paragraph{
+        font-size: 5rem !important;
+    }
+}
