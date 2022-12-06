@@ -27,3 +27,13 @@ const textEmoji = {
 }
 
 
+function cleanBoard(){
+    scoreContainer.innerHTML = '';
+    display.innerHTML = '';
+    resultContainer.innerHTML = '';
+    
+    rockButton.classList.add('hidden');
+    paperButton.classList.add('hidden');
+    scissorsButton.classList.add('hidden');
+}
+
