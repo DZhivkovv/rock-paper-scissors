@@ -37,6 +37,13 @@ function cleanBoard(){
     scissorsButton.classList.add('hidden');
 }
 
+function getComputerChoice(){
+    /*Generates a random number netween 0 and 2 which will determine the computer's choice between rock, paper and scissors*/
+    const choiceIndex = Math.floor(Math.random()*3)
+    return choices[choiceIndex].innerText;
+}
+
+
 function appendElements(playerChoice, computerChoice, winner){
     if(winner === 'Player'){
         scoreContainer.innerHTML = `<p><span>You: ${playerPoints} - Computer: ${computerPoints}</span></p>`
