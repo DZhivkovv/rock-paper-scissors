@@ -140,3 +140,14 @@ function endGame(){
     restartButton.classList.remove('hidden');
 }
 
+function restartGame(){
+    /*Resets the points */
+    playerPoints = 0;
+    computerPoints = 0;
+
+    /*Hides the restart button and shows the 'start game' button */
+    restartButton.classList.add('hidden');
+    startButton.classList.remove('hidden')
+
+    startGame();
+    }
