@@ -27,6 +27,7 @@ const textEmoji = {
 }
 
 
+
 function cleanBoard(){
     scoreContainer.innerHTML = '';
     display.innerHTML = '';
@@ -35,6 +36,20 @@ function cleanBoard(){
     rockButton.classList.add('hidden');
     paperButton.classList.add('hidden');
     scissorsButton.classList.add('hidden');
+}
+
+function startGame(){
+    cleanBoard();
+    display.innerHTML = `<p id="start-emojis">${textEmoji.Rock} ${textEmoji.Paper} ${textEmoji.Scissors} <br><span>Rock, Paper, Scissors</span></p>`
+
+    startButton.addEventListener('click', ()=>{
+        rockButton.classList.remove('hidden');
+        paperButton.classList.remove('hidden');
+        scissorsButton.classList.remove('hidden');
+        startButton.classList.add('hidden');
+        
+        display.innerHTML = '';
+    })
 }
 
 function getComputerChoice(){
