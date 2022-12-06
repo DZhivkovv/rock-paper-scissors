@@ -118,6 +118,17 @@ function playRound(playerChoice){
     }
 }
 
+function getGameWinner (){
+    if(playerPoints > computerPoints){
+        gameWinner = 'You';
+        return gameWinner
+    }
+    else if (computerPoints > playerPoints){
+        gameWinner = 'Computer';
+        return gameWinner
+    }   
+}
+
 function endGame(){
     cleanBoard();
     const winner = getGameWinner();
