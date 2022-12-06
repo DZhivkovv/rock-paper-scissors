@@ -8,10 +8,30 @@ const resultContainer = document.getElementById('result-container');
 /*Buttons */
 const choices = document.querySelectorAll('.choice');
 const rockButton = document.getElementById('rock-btn');
+rockButton.addEventListener('click', ()=>{
+    playRound('Rock', rounds);
+})
+
 const paperButton = document.getElementById('paper-btn');
+paperButton.addEventListener('click', ()=>{
+    playRound('Paper', rounds);
+})
+
 const scissorsButton = document.getElementById('scissors-btn');
+scissorsButton.addEventListener('click', ()=>{
+    playRound('Scissors', rounds);
+})
+
 const startButton = document.getElementById('start-btn');
+startButton.onclick = () => {
+    startGame();
+}
+
 const restartButton = document.getElementById('restart-btn');
+restartButton.addEventListener('click', ()=>{
+    restartGame();
+})
+
 
 /*Properties*/
 let rounds = 5;
