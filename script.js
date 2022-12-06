@@ -37,3 +37,23 @@ function cleanBoard(){
     scissorsButton.classList.add('hidden');
 }
 
+function appendElements(playerChoice, computerChoice, winner){
+    if(winner === 'Player'){
+        scoreContainer.innerHTML = `<p><span>You: ${playerPoints} - Computer: ${computerPoints}</span></p>`
+        resultContainer.innerHTML= '<p>Point for you!</p>';
+        display.innerHTML = `<p id="comparison">${textEmoji[playerChoice]} : ${textEmoji[computerChoice]}</p>`
+    }
+    else if (winner === 'Computer'){
+        scoreContainer.innerHTML = `<p><span>You: ${playerPoints} - Computer: ${computerPoints}</span></p>`
+        resultContainer.innerHTML = '<p>Point for the computer!</p>';
+        display.innerHTML = `<p id="comparison">${textEmoji[playerChoice]} : ${textEmoji[computerChoice]}</p>`
+
+    }
+    else if(winner === 'None'){
+        scoreContainer.innerHTML = `<p><span>You: ${playerPoints} - Computer: ${computerPoints}</span></p>`
+        resultContainer.innerHTML = '<p>Tie!</p>';
+        display.innerHTML = `<p id="comparison">${textEmoji[playerChoice]} : ${textEmoji[computerChoice]}</p>`
+        
+    }
+}
+
