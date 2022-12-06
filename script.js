@@ -103,3 +103,14 @@ function playRound(playerChoice){
     }
 }
 
+function endGame(){
+    cleanBoard();
+    const winner = getGameWinner();
+    if (winner === 'You'){
+        display.innerHTML = "<p class='winner-paragraph' id='winner-paragraph-you'>You win!</p>"
+    } else if(winner === 'Computer'){
+        display.innerHTML = "<p class = 'winner-paragraph' id='winner-paragraph-computer'>Computer <br> wins!</p>"
+    }   
+    restartButton.classList.remove('hidden');
+}
+
